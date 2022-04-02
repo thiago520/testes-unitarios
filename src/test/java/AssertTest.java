@@ -1,6 +1,6 @@
 import br.ce.wcaquino.entidades.Usuario;
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class AssertTest {
 
@@ -33,11 +33,6 @@ public class AssertTest {
 
         Assert.assertNull(u3);
         Assert.assertNotNull(u2);
-
-
-
-
-
 
     }
 }
