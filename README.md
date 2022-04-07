@@ -1,9 +1,9 @@
 <h2 align="center">Testes unitários em JAVA: Domine JUnit, Mockito e TDD</h2>
 
 <p align="left">
-Utilizaremos diversas ferramentas como o JUnit, Mockito, PowerMock, EclEmma (JACOCO) e o IntelliJ como IDE de desenvolvimento.
-Também apresentarei DataBuilders com conceitos de Fluent Interface e ObjectMother para facilitar as criações das entidades
-nos cenários, inclusive, disponibilizarei uma ferramenta própria que irá automatizar grande parte dessa tarefa de criação.
+Utilizado diversas ferramentas como o JUnit, Mockito, PowerMock, EclEmma (JACOCO) e o IntelliJ como IDE de desenvolvimento.
+Também apresentado DataBuilders com conceitos de Fluent Interface e ObjectMother para facilitar as criações das entidades
+nos cenários, inclusive, disponibilizado uma ferramenta própria que irá automatizar grande parte dessa tarefa de criação.
 O TDD (Test Driven Development) é uma técnica que funciona muito bem no escopo desse curso.
 </p>
 
@@ -24,5 +24,5 @@ O TDD (Test Driven Development) é uma técnica que funciona muito bem no escopo
 <a href="https://linkedin.com/in/thiagobernardiparascandalo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="thiagobernardiparascandalo" height="30" width="40" /></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
+<h3 align="left">Languages:</h3>
 <p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> </p>
