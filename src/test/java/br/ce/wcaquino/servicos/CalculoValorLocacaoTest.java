@@ -1,11 +1,10 @@
 package br.ce.wcaquino.servicos;
 
 import br.ce.wcaquino.daos.LocacaoDAO;
-import br.ce.wcaquino.daos.LocacaoDAOFake;
 import br.ce.wcaquino.entidades.Filme;
 import br.ce.wcaquino.entidades.Locacao;
 import br.ce.wcaquino.entidades.Usuario;
-import br.ce.wcaquino.exceptions.FilmesSemEstoqueException;
+import br.ce.wcaquino.exceptions.FilmeSemEstoqueException;
 import br.ce.wcaquino.exceptions.LocadoraException;
 import builders.FilmeBuilder;
 import builders.UsuarioBuilder;
@@ -15,7 +14,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mockito;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -24,7 +25,15 @@ import java.util.List;
 @RunWith(Parameterized.class)
 public class CalculoValorLocacaoTest {
 
+    @InjectMocks
     private LocacaoService service;
+
+    @Mock
+    private LocacaoDAO dao;
+
+    @Mock
+    private SPCService spc;
+
     @Parameterized.Parameter
     public List<Filme> filmes;
     @Parameterized.Parameter(value = 1)
@@ -34,9 +43,7 @@ public class CalculoValorLocacaoTest {
 
     @Before
     public void setup() {
-        service = new LocacaoService();
-        LocacaoDAO dao = Mockito.mock(LocacaoDAO.class);
-        service.setLocacaoDAO(dao);
+        MockitoAnnotations.initMocks(this);
     }
 
     private static Filme filme1 = FilmeBuilder.umFilme().agora();
@@ -60,7 +67,7 @@ public class CalculoValorLocacaoTest {
     }
 
     @Test
-    public void deveCalcularValorLocacaoConsiderandoDescontos() throws LocadoraException, FilmesSemEstoqueException {
+    public void deveCalcularValorLocacaoConsiderandoDescontos() throws LocadoraException, FilmeSemEstoqueException {
         //cenario
         Usuario usuario = UsuarioBuilder.umUsuario().agora();
 
